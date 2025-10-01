@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>33 Card Digital Truth Deck - Join the Waitlist</title>
     <style>
+        /* [Your CSS is here and remains unchanged] */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Georgia', serif;
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
@@ -21,7 +22,7 @@
             padding: 20px;
             color: #fff;
         }
-        
+
         .container {
             max-width: 600px;
             width: 100%;
@@ -32,7 +33,7 @@
             padding: 50px 40px;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
         }
-        
+
         .number {
             font-size: 72px;
             font-weight: bold;
@@ -44,7 +45,7 @@
             margin-bottom: 10px;
             letter-spacing: 8px;
         }
-        
+
         h1 {
             font-size: 28px;
             text-align: center;
@@ -53,7 +54,7 @@
             letter-spacing: 2px;
             line-height: 1.3;
         }
-        
+
         .subtitle {
             text-align: center;
             font-size: 16px;
@@ -62,11 +63,11 @@
             font-style: italic;
             line-height: 1.6;
         }
-        
+
         .form-group {
             margin-bottom: 25px;
         }
-        
+
         label {
             display: block;
             margin-bottom: 8px;
@@ -75,7 +76,7 @@
             text-transform: uppercase;
             color: rgba(255, 255, 255, 0.9);
         }
-        
+
         input[type="text"],
         input[type="email"] {
             width: 100%;
@@ -87,29 +88,29 @@
             color: #fff;
             transition: all 0.3s ease;
         }
-        
+
         input[type="text"]:focus,
         input[type="email"]:focus {
             outline: none;
             border-color: #d4af37;
             background: rgba(255, 255, 255, 0.08);
         }
-        
+
         input::placeholder {
             color: rgba(255, 255, 255, 0.4);
         }
-        
+
         .checkbox-group {
             margin: 30px 0;
         }
-        
+
         .checkbox-wrapper {
             display: flex;
             align-items: flex-start;
             gap: 12px;
             margin-bottom: 15px;
         }
-        
+
         input[type="checkbox"] {
             margin-top: 4px;
             width: 20px;
@@ -117,7 +118,7 @@
             cursor: pointer;
             accent-color: #d4af37;
         }
-        
+
         .checkbox-label {
             font-size: 14px;
             line-height: 1.6;
@@ -125,7 +126,7 @@
             text-transform: none;
             letter-spacing: normal;
         }
-        
+
         button {
             width: 100%;
             padding: 18px;
@@ -141,44 +142,44 @@
             transition: all 0.3s ease;
             margin-top: 10px;
         }
-        
+
         button:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
         }
-        
+
         button:active {
             transform: translateY(0);
         }
-        
+
         button:disabled {
             opacity: 0.6;
             cursor: not-allowed;
             transform: none;
         }
-        
+
         .success-message {
             display: none;
             text-align: center;
             padding: 30px;
         }
-        
+
         .success-message.show {
             display: block;
         }
-        
+
         .success-message h2 {
             font-size: 28px;
             margin-bottom: 20px;
             color: #d4af37;
         }
-        
+
         .success-message p {
             font-size: 16px;
             line-height: 1.8;
             color: rgba(255, 255, 255, 0.9);
         }
-        
+
         .error-message {
             display: none;
             background: rgba(255, 82, 82, 0.1);
@@ -189,69 +190,69 @@
             margin-bottom: 20px;
             font-size: 14px;
         }
-        
+
         .error-message.show {
             display: block;
         }
-        
+
         .divider {
             height: 1px;
             background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.5), transparent);
             margin: 30px 0;
         }
-        
+
         .instructions {
-            background: rgba(212, 175, 55, 0.1);
-            border: 1px solid rgba(212, 175, 55, 0.3);
+            background: rgba(255, 82, 82, 0.1); /* Changed to red for urgent action */
+            border: 1px solid rgba(255, 82, 82, 0.3);
             padding: 20px;
             border-radius: 8px;
             margin-bottom: 30px;
         }
-        
+
         .instructions h3 {
-            color: #d4af37;
-            font-size: 16px;
+            color: #ff5252; /* Changed color for urgency */
+            font-size: 18px;
             margin-bottom: 10px;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-        
+
         .instructions p {
             font-size: 14px;
             line-height: 1.6;
             color: rgba(255, 255, 255, 0.85);
             margin-bottom: 10px;
         }
-        
+
         .instructions code {
             background: rgba(0, 0, 0, 0.3);
             padding: 2px 6px;
             border-radius: 4px;
             font-family: monospace;
             font-size: 13px;
-            color: #d4af37;
+            color: #ff5252; /* Changed color for urgency */
         }
-        
+
         .instructions ol {
             margin-left: 20px;
             font-size: 14px;
             line-height: 1.8;
             color: rgba(255, 255, 255, 0.85);
         }
-        
+
         .instructions li {
             margin-bottom: 8px;
         }
-        
+
         @media (max-width: 600px) {
             .container {
                 padding: 40px 25px;
             }
-            
+
             .number {
                 font-size: 56px;
             }
-            
+
             h1 {
                 font-size: 24px;
             }
@@ -264,51 +265,47 @@
             <div class="number">33</div>
             <h1>Card Digital Truth Deck</h1>
             <p class="subtitle">For Women Ready to Remember</p>
-            
+
             <div class="divider"></div>
-            
+
             <div class="instructions">
-                <h3>📋 Setup Instructions</h3>
-                <p><strong>To make this form functional, follow these steps:</strong></p>
+                <h3>🚨 ACTION REQUIRED TO GO LIVE 🚨</h3>
+                <p>This form is **BROKEN** until you replace the <code>PLACEHOLDER</code> values below with the **actual IDs** from your Google Form.</p>
                 <ol>
-                    <li>Create a new Google Form at <a href="https://forms.google.com" target="_blank" style="color: #d4af37;">forms.google.com</a></li>
-                    <li>Add the same questions (Name, Email, checkboxes)</li>
-                    <li>Click <strong>Send</strong> → Click the <code>&lt; &gt;</code> embed icon</li>
-                    <li>Copy the <strong>iframe URL</strong> (looks like: <code>https://docs.google.com/forms/d/e/...</code>)</li>
-                    <li>Paste that URL into the <code>GOOGLE_FORM_URL</code> variable in the script below</li>
+                    <li>**Copy the ID** from your Google Form embed code (it looks like <code>entry.123456789</code>).</li>
+                    <li>**Paste it into the corresponding input field** below (e.g., paste the Email ID into the Email field's <code>name</code> attribute).</li>
                 </ol>
-                <p style="margin-top: 15px;"><em>Once connected, all submissions will go directly to your Google Sheets!</em></p>
             </div>
-            
+
             <div id="errorMessage" class="error-message"></div>
-            
+
             <form id="waitlistForm">
                 <div class="form-group">
                     <label for="firstName">First Name</label>
-                    <input type="text" id="firstName" name="firstName" required placeholder="Your first name">
+                    <input type="text" id="firstName" name="ENTRY_ID_FIRST_NAME" required placeholder="Your first name">
                 </div>
-                
+
                 <div class="form-group">
                     <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" required placeholder="where.you.remember@gmail.com">
+                    <input type="email" id="email" name="ENTRY_ID_EMAIL" required placeholder="where.you.remember@gmail.com">
                 </div>
-                
+
                 <div class="checkbox-group">
                     <div class="checkbox-wrapper">
-                        <input type="checkbox" id="earlyBird" name="earlyBird">
+                        <input type="checkbox" id="earlyBird" name="ENTRY_ID_EARLY_BIRD" value="Yes">
                         <label for="earlyBird" class="checkbox-label">Yes, notify me about early bird pricing and exclusive launch bonuses</label>
                     </div>
-                    
+
                     <div class="checkbox-wrapper">
-                        <input type="checkbox" id="inspiration" name="inspiration">
+                        <input type="checkbox" id="inspiration" name="ENTRY_ID_INSPIRATION" value="Yes">
                         <label for="inspiration" class="checkbox-label">Send me occasional truth activations while I wait</label>
                     </div>
                 </div>
-                
+
                 <button type="submit" id="submitBtn">Join the Waitlist</button>
             </form>
         </div>
-        
+
         <div id="successMessage" class="success-message">
             <h2>Welcome Home ✨</h2>
             <p>You're on the list. Check your email—your first truth activation is waiting.</p>
@@ -316,49 +313,48 @@
             <p style="font-style: italic; font-size: 14px; margin-top: 20px;">You don't need permission to take up space anymore.</p>
         </div>
     </div>
-    
+
     <script>
-        // ⚠️ IMPORTANT: Replace this with your Google Form URL
-        // Get it from: Google Form → Send → Embed (<>) → Copy the URL from the iframe src
-        const GOOGLE_FORM_URL = 'YOUR_GOOGLE_FORM_URL_HERE';
-        
+        // 🚨 STEP 1: YOUR GOOGLE FORM SUBMISSION ENDPOINT IS NOW CORRECTLY SET 🚨
+        // It comes from the URL you provided, with /viewform changed to /formResponse.
+        const GOOGLE_FORM_ACTION_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSchQl4r_QXmpIH8zJJcOXkaE3RhssyMs0n09Q-FPTcSyKqr4g/formResponse'; 
+
         const form = document.getElementById('waitlistForm');
         const formContainer = document.getElementById('formContainer');
         const successMessage = document.getElementById('successMessage');
         const errorMessage = document.getElementById('errorMessage');
         const submitBtn = document.getElementById('submitBtn');
-        
+
         form.addEventListener('submit', async function(e) {
             e.preventDefault();
+
+            // Check if any placeholder IDs were missed
+            const checkPlaceholders = ['ENTRY_ID_FIRST_NAME', 'ENTRY_ID_EMAIL', 'ENTRY_ID_EARLY_BIRD', 'ENTRY_ID_INSPIRATION'];
+            const formData = new FormData(form);
             
-            // Hide any previous errors
-            errorMessage.classList.remove('show');
-            
-            // Check if form URL is configured
-            if (GOOGLE_FORM_URL === '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSchQl4r_QXmpIH8zJJcOXkaE3RhssyMs0n09Q-FPTcSyKqr4g/viewform?embedded=true" width="640" height="1015" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>') {
-                errorMessage.textContent = 'Form not yet configured. Please follow the setup instructions above to connect your Google Form.';
-                errorMessage.classList.add('show');
-                return;
+            for (const key of checkPlaceholders) {
+                if (form.querySelector(`[name="${key}"]`)) {
+                    errorMessage.textContent = 'Configuration Error: Please replace all "ENTRY_ID_..." placeholders in the HTML with the actual Google Form field IDs.';
+                    errorMessage.classList.add('show');
+                    return;
+                }
             }
-            
-            // Disable submit button
+
+            errorMessage.classList.remove('show');
             submitBtn.disabled = true;
             submitBtn.textContent = 'Joining...';
             
-            const formData = {
-                firstName: document.getElementById('firstName').value,
-                email: document.getElementById('email').value,
-                earlyBird: document.getElementById('earlyBird').checked ? 'Yes' : 'No',
-                inspiration: document.getElementById('inspiration').checked ? 'Yes' : 'No',
-                timestamp: new Date().toISOString()
-            };
-            
             try {
-                // Here you would normally send to your Google Form
-                // For now, we'll simulate success
-                console.log('Form submission:', formData);
-                
-                // Show success message after brief delay
+                // Submit the data to the Google Form endpoint
+                const response = await fetch(GOOGLE_FORM_ACTION_URL, {
+                    method: 'POST',
+                    mode: 'no-cors', // This is necessary for cross-domain submission to Google Forms
+                    body: new URLSearchParams(formData)
+                });
+
+                // Since we use 'no-cors', we assume success if the fetch operation completes without network errors.
+
+                // Show custom success message
                 setTimeout(() => {
                     formContainer.style.display = 'none';
                     successMessage.classList.add('show');
@@ -366,7 +362,7 @@
                 
             } catch (error) {
                 console.error('Submission error:', error);
-                errorMessage.textContent = 'Something went wrong. Please try again or contact support.';
+                errorMessage.textContent = 'Something went wrong while submitting. Please try again.';
                 errorMessage.classList.add('show');
                 submitBtn.disabled = false;
                 submitBtn.textContent = 'Join the Waitlist';

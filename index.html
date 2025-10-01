@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>33 Card Digital Truth Deck - Join the Waitlist</title>
   <style>
-    /* Your existing CSS remains the same */
     * {
       margin: 0;
       padding: 0;
@@ -70,69 +69,12 @@
       margin: 30px 0;
     }
 
-    /* New Form Styles */
-    .direct-form {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-    
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-    
-    label {
-      font-size: 14px;
-      color: rgba(255, 255, 255, 0.8);
-      margin-bottom: 5px;
-    }
-    
-    input, textarea {
-      padding: 15px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: 10px;
-      background: rgba(255, 255, 255, 0.1);
-      color: white;
-      font-size: 16px;
-      font-family: 'Georgia', serif;
-    }
-    
-    input::placeholder, textarea::placeholder {
-      color: rgba(255, 255, 255, 0.5);
-    }
-    
-    input:focus, textarea:focus {
-      outline: none;
-      border-color: #d4af37;
-    }
-    
-    button {
-      padding: 15px 30px;
-      background: linear-gradient(135deg, #d4af37, #b8941f);
-      border: none;
-      border-radius: 10px;
-      color: #1a1a2e;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: transform 0.2s;
-      font-family: 'Georgia', serif;
-    }
-    
-    button:hover {
-      transform: translateY(-2px);
-    }
-    
-    .success-message {
-      display: none;
-      text-align: center;
-      padding: 20px;
-      background: rgba(212, 175, 55, 0.1);
-      border: 1px solid #d4af37;
-      border-radius: 10px;
-      margin-top: 20px;
+    .form-iframe-wrapper {
+      width: 100%;
+      height: 75vh;          /* responsive height */
+      min-height: 600px;     /* ensures usability on small screens */
+      border-radius: 12px;
+      overflow: hidden;
     }
     
     @media (max-width: 600px) {
@@ -158,37 +100,19 @@
     
     <div class="divider"></div>
     
-    <!-- Direct Form Integration -->
-    <form class="direct-form" 
-          action="https://docs.google.com/forms/d/e/1FAIpQLSchQl4r_QXmpIH8zJJcOXkaE3RhssyMs0n09Q-FPTcSyKqr4g/formResponse" 
-          method="POST"
-          target="_blank">
-      
-      <div class="form-group">
-        <label for="email">Email Address *</label>
-        <input type="email" id="email" name="entry.2144899258" placeholder="Enter your email" required>
-      </div>
-      
-      <div class="form-group">
-        <label for="name">Full Name</label>
-        <input type="text" id="name" name="entry.1358495" placeholder="Enter your full name">
-      </div>
-      
-      <button type="submit">Join Waitlist</button>
-    </form>
-    
-    <div class="success-message" id="successMessage">
-      Thank you for joining our waitlist! We'll be in touch soon.
+    <!-- Google Form Embed -->
+    <div class="form-iframe-wrapper">
+      <iframe 
+        src="https://docs.google.com/forms/d/e/1FAIpQLSchQl4r_QXmpIH8zJJcOXkaE3RhssyMs0n09Q-FPTcSyKqr4g/viewform?embedded=true" 
+        width="100%" 
+        height="100%" 
+        frameborder="0" 
+        marginheight="0" 
+        marginwidth="0"
+        title="33 Card Digital Truth Deck - Waitlist">
+        Loading…
+      </iframe>
     </div>
   </div>
-
-  <script>
-    // Simple form success handler
-    document.querySelector('.direct-form').addEventListener('submit', function(e) {
-      setTimeout(function() {
-        document.getElementById('successMessage').style.display = 'block';
-      }, 1000);
-    });
-  </script>
 </body>
 </html>

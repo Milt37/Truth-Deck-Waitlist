@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>33 Card Digital Truth Deck - Join the Waitlist</title>
     <style>
-        /* [Your CSS is here and remains unchanged] */
+        /* Your CSS is here and remains unchanged */
         * {
             margin: 0;
             padding: 0;
@@ -200,63 +200,6 @@
             background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.5), transparent);
             margin: 30px 0;
         }
-
-        .instructions {
-            background: rgba(255, 82, 82, 0.1); /* Changed to red for urgent action */
-            border: 1px solid rgba(255, 82, 82, 0.3);
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-        }
-
-        .instructions h3 {
-            color: #ff5252; /* Changed color for urgency */
-            font-size: 18px;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .instructions p {
-            font-size: 14px;
-            line-height: 1.6;
-            color: rgba(255, 255, 255, 0.85);
-            margin-bottom: 10px;
-        }
-
-        .instructions code {
-            background: rgba(0, 0, 0, 0.3);
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-family: monospace;
-            font-size: 13px;
-            color: #ff5252; /* Changed color for urgency */
-        }
-
-        .instructions ol {
-            margin-left: 20px;
-            font-size: 14px;
-            line-height: 1.8;
-            color: rgba(255, 255, 255, 0.85);
-        }
-
-        .instructions li {
-            margin-bottom: 8px;
-        }
-
-        @media (max-width: 600px) {
-            .container {
-                padding: 40px 25px;
-            }
-
-            .number {
-                font-size: 56px;
-            }
-
-            h1 {
-                font-size: 24px;
-            }
-        }
     </style>
 </head>
 <body>
@@ -268,36 +211,27 @@
 
             <div class="divider"></div>
 
-            <div class="instructions">
-                <h3>🚨 ACTION REQUIRED TO GO LIVE 🚨</h3>
-                <p>This form is **BROKEN** until you replace the <code>PLACEHOLDER</code> values below with the **actual IDs** from your Google Form.</p>
-                <ol>
-                    <li>**Copy the ID** from your Google Form embed code (it looks like <code>entry.123456789</code>).</li>
-                    <li>**Paste it into the corresponding input field** below (e.g., paste the Email ID into the Email field's <code>name</code> attribute).</li>
-                </ol>
-            </div>
-
             <div id="errorMessage" class="error-message"></div>
 
             <form id="waitlistForm">
                 <div class="form-group">
                     <label for="firstName">First Name</label>
-                    <input type="text" id="firstName" name="ENTRY_ID_FIRST_NAME" required placeholder="Your first name">
+                    <input type="text" id="firstName" name="entry.674810425" required placeholder="Your first name">
                 </div>
 
                 <div class="form-group">
                     <label for="email">Email Address</label>
-                    <input type="email" id="email" name="ENTRY_ID_EMAIL" required placeholder="where.you.remember@gmail.com">
+                    <input type="email" id="email" name="entry.946015127" required placeholder="where.you.remember@gmail.com">
                 </div>
 
                 <div class="checkbox-group">
                     <div class="checkbox-wrapper">
-                        <input type="checkbox" id="earlyBird" name="ENTRY_ID_EARLY_BIRD" value="Yes">
+                        <input type="checkbox" id="earlyBird" name="entry.403543284" value="Yes">
                         <label for="earlyBird" class="checkbox-label">Yes, notify me about early bird pricing and exclusive launch bonuses</label>
                     </div>
 
                     <div class="checkbox-wrapper">
-                        <input type="checkbox" id="inspiration" name="ENTRY_ID_INSPIRATION" value="Yes">
+                        <input type="checkbox" id="inspiration" name="entry.44804308" value="Yes">
                         <label for="inspiration" class="checkbox-label">Send me occasional truth activations while I wait</label>
                     </div>
                 </div>
@@ -315,8 +249,7 @@
     </div>
 
     <script>
-        // 🚨 STEP 1: YOUR GOOGLE FORM SUBMISSION ENDPOINT IS NOW CORRECTLY SET 🚨
-        // It comes from the URL you provided, with /viewform changed to /formResponse.
+        // FORM ACTION URL IS CORRECT
         const GOOGLE_FORM_ACTION_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSchQl4r_QXmpIH8zJJcOXkaE3RhssyMs0n09Q-FPTcSyKqr4g/formResponse'; 
 
         const form = document.getElementById('waitlistForm');
@@ -328,33 +261,23 @@
         form.addEventListener('submit', async function(e) {
             e.preventDefault();
 
-            // Check if any placeholder IDs were missed
-            const checkPlaceholders = ['ENTRY_ID_FIRST_NAME', 'ENTRY_ID_EMAIL', 'ENTRY_ID_EARLY_BIRD', 'ENTRY_ID_INSPIRATION'];
-            const formData = new FormData(form);
-            
-            for (const key of checkPlaceholders) {
-                if (form.querySelector(`[name="${key}"]`)) {
-                    errorMessage.textContent = 'Configuration Error: Please replace all "ENTRY_ID_..." placeholders in the HTML with the actual Google Form field IDs.';
-                    errorMessage.classList.add('show');
-                    return;
-                }
-            }
-
             errorMessage.classList.remove('show');
             submitBtn.disabled = true;
             submitBtn.textContent = 'Joining...';
             
+            // Collect form data
+            const formData = new FormData(form);
+            
             try {
                 // Submit the data to the Google Form endpoint
+                // We use 'no-cors' mode as we are submitting cross-origin, and expect a simple status 0/success.
                 const response = await fetch(GOOGLE_FORM_ACTION_URL, {
                     method: 'POST',
-                    mode: 'no-cors', // This is necessary for cross-domain submission to Google Forms
+                    mode: 'no-cors',
                     body: new URLSearchParams(formData)
                 });
 
-                // Since we use 'no-cors', we assume success if the fetch operation completes without network errors.
-
-                // Show custom success message
+                // Show custom success message on successful fetch completion (regardless of response status in no-cors mode)
                 setTimeout(() => {
                     formContainer.style.display = 'none';
                     successMessage.classList.add('show');
@@ -362,7 +285,7 @@
                 
             } catch (error) {
                 console.error('Submission error:', error);
-                errorMessage.textContent = 'Something went wrong while submitting. Please try again.';
+                errorMessage.textContent = 'A network error occurred. Please check your internet connection and try again.';
                 errorMessage.classList.add('show');
                 submitBtn.disabled = false;
                 submitBtn.textContent = 'Join the Waitlist';
